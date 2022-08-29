@@ -20,11 +20,11 @@
   "entrypoints": {
     "main": [
       "net.farrucho.advancedblocks.AdvancedBlocks"
+    ],
+    "client": [
+      "net.farrucho.advancedblocks.AdvancedBlocksClient"
     ]
   },
-  "client": [
-    "net.farrucho.advancedblocks.AdvancedBlocksClient"
-  ],
   "mixins": [
     "advancedblocks.mixins.json"
   ],

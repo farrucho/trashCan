@@ -1,44 +1,60 @@
 package net.farrucho.advancedblocks.block.entity;
 
-import net.farrucho.advancedblocks.AdvancedBlocks;
-import net.farrucho.advancedblocks.block.custom.TrashCanBlock;
+import net.farrucho.advancedblocks.screen.TrashCanScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityTicker;
-import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.client.MinecraftClient;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.Inventories;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.screen.ScreenHandler;
+import net.minecraft.text.Text;
+import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
-public class TrashCanBlockEntity extends BlockEntity {
+public class TrashCanBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory  {
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(9, ItemStack.EMPTY);
+
     public TrashCanBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.TRASH_CAN, pos, state);
     }
 
-    /*If you want to store any data in your BlockEntity, you will need to save and load it, or it will only be held while the BlockEntity is loaded, and the data will reset whenever you come back to it. Luckily, saving and loading is quite simple - you only need to override writeNbt() and readNbt().*/
+    //From the ImplementedInventory Interface
 
-    // Store the current value of the number
-    private int number = 7;
-
-    // Serialize the BlockEntity
     @Override
-    public void writeNbt(NbtCompound nbt) {
-        // Save the current value of the number to the nbt
-        nbt.putInt("number", number);
+    public DefaultedList<ItemStack> getItems() {
+        return inventory;
 
-        super.writeNbt(nbt);
     }
 
-    // Deserialize the BlockEntity
+    //These Methods are from the NamedScreenHandlerFactory Interface
+    //createMenu creates the ScreenHandler itself
+    //getDisplayName will Provide its name which is normally shown at the top
+
+    @Override
+    public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
+        //We provide *this* to the screenHandler as our class Implements Inventory
+        //Only the Server has the Inventory at the start, this will be synced to the client in the ScreenHandler
+        return new TrashCanScreenHandler(syncId, playerInventory, this);
+    }
+
+    @Override
+    public Text getDisplayName() {
+        return Text.translatable(getCachedState().getBlock().getTranslationKey());
+    }
+
     @Override
     public void readNbt(NbtCompound nbt) {
         super.readNbt(nbt);
-
-        number = nbt.getInt("number");
+        Inventories.readNbt(nbt, this.inventory);
     }
 
-    public static void tick(World world, BlockPos pos, BlockState state, TrashCanBlockEntity entity) {
-        //AdvancedBlocks.LOGGER.debug("tick123");
+    @Override
+    public void writeNbt(NbtCompound nbt) {
+        super.writeNbt(nbt);
+        Inventories.writeNbt(nbt, this.inventory);
     }
+
 }

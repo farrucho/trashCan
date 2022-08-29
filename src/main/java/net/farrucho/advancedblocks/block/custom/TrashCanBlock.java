@@ -7,7 +7,14 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.screen.ScreenHandler;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.function.BooleanBiFunction;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
@@ -16,7 +23,9 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import java.util.stream.Stream;
 
-public class TrashCanBlock extends BlockWithEntity implements BlockEntityProvider {
+
+//TIREI  implements BlockEntityProvider
+public class TrashCanBlock extends BlockWithEntity{
     public TrashCanBlock(Settings settings) {
         super(settings);
     }
@@ -27,12 +36,13 @@ public class TrashCanBlock extends BlockWithEntity implements BlockEntityProvide
             Block.createCuboidShape(3, 0, 3, 13, 12, 13)
             ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
+
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPE;//é possivel consoante o blockstate retornar a voxel shape que queremos é oque ele faz no tutorial
+        return SHAPE;
     }
 
-    //entity-------------------------------------
+//entity-------------------------------------
 
     @Nullable
     @Override
@@ -40,13 +50,49 @@ public class TrashCanBlock extends BlockWithEntity implements BlockEntityProvide
         return new TrashCanBlockEntity(pos, state);
     }
 
-    @Nullable
+
     @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        //return checkType(type, ModBlockEntities.TRASH_CAN, TrashCanBlockEntity::tick);
-        return checkType(type, ModBlockEntities.TRASH_CAN, TrashCanBlockEntity::tick);
+    public BlockRenderType getRenderType(BlockState state) {
+        return BlockRenderType.MODEL;//With inheriting from BlockWithEntity this defaults to INVISIBLE, so we need to change that!
+    }
+
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (!world.isClient) {
+            //This will call the createScreenHandlerFactory method from BlockWithEntity, which will return our blockEntity casted to
+            //a namedScreenHandlerFactory. If your block class does not extend BlockWithEntity, it needs to implement createScreenHandlerFactory.
+            NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, pos);
+
+            if (screenHandlerFactory != null) {
+                //With this call the server will request the client to open the appropriate Screenhandler
+                player.openHandledScreen(screenHandlerFactory);
+            }
+        }
+        return ActionResult.SUCCESS;
     }
 
 
+    //This method will drop all items onto the ground when the block is broken
+    @Override
+    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        if (state.getBlock() != newState.getBlock()) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof TrashCanBlockEntity) {
+                ItemScatterer.spawn(world, pos, (TrashCanBlockEntity)blockEntity);
+                // update comparators
+                world.updateComparators(pos,this);
+            }
+            super.onStateReplaced(state, world, pos, newState, moved);
+        }
+    }
 
+    @Override
+    public boolean hasComparatorOutput(BlockState state) {
+        return true;
+    }
+
+    @Override
+    public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
+        return ScreenHandler.calculateComparatorOutput(world.getBlockEntity(pos));
+    }
 }

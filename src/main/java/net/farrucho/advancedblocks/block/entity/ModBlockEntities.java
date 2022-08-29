@@ -15,7 +15,7 @@ public class ModBlockEntities {
                 Registry.BLOCK_ENTITY_TYPE,
                 new Identifier(AdvancedBlocks.MOD_ID, "trash_can"),
                 FabricBlockEntityTypeBuilder.create(
-                        TrashCanBlockEntity::new, AdvancedBlocksModBlocks.TRASH_CAN_BLOCK).build()
+                        TrashCanBlockEntity::new, AdvancedBlocksModBlocks.TRASH_CAN_BLOCK).build(null)
         );
 
 
