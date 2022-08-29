@@ -15,7 +15,7 @@ import net.minecraft.util.registry.Registry;
 public class AdvancedBlocksModBlocks {
     //public static final Block JUMPY_BLOCK = registerBlock("jumpy_block", new JumpyBlock(FabricBlockSettings.of(Material.WOOL)),ItemGroup.MISC);
 
-    public static final Block TRASH_CAN = registerBlock("trash_can", new TrashCanBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()), ItemGroup.MISC);
+    public static final Block TRASH_CAN_BLOCK = registerBlock("trash_can", new TrashCanBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()), ItemGroup.MISC);
 
     private static Block registerBlock(String name, Block block, ItemGroup group){
         registerBlockItem(name, block, group);

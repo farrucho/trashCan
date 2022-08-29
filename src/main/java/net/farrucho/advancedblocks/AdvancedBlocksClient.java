@@ -8,6 +8,6 @@ import net.minecraft.client.render.RenderLayer;
 public class AdvancedBlocksClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(AdvancedBlocksModBlocks.TRASH_CAN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AdvancedBlocksModBlocks.TRASH_CAN_BLOCK, RenderLayer.getCutout());
     }
 }
