@@ -31,10 +31,10 @@ public class TrashCanBlock extends BlockWithEntity{
     }
 
     private static final VoxelShape SHAPE = Stream.of(
-            Block.createCuboidShape(5, 13, 5, 11, 14, 11),
-            Block.createCuboidShape(1, 12, 1, 15, 13, 15),
-            Block.createCuboidShape(3, 0, 3, 13, 12, 13)
-            ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+            Block.createCuboidShape(1, 9, 1, 15, 13, 15),
+            Block.createCuboidShape(5, 13, 6, 11, 14, 10),
+            Block.createCuboidShape(2, 0, 2, 14, 9, 14)
+    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
 
     @Override
@@ -94,5 +94,11 @@ public class TrashCanBlock extends BlockWithEntity{
     @Override
     public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
         return ScreenHandler.calculateComparatorOutput(world.getBlockEntity(pos));
+    }
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return checkType(type, ModBlockEntities.TRASH_CAN, (world1, pos, state1, be) -> TrashCanBlockEntity.tick(world1, pos, state1, be));//pode ser replaced a lambda reference para ::new
     }
 }

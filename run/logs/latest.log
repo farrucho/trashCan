@@ -1,5 +1,5 @@
-[23:52:04] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.19.2 with Fabric Loader 0.14.8
-[23:52:04] [main/INFO] (FabricLoader) Loading 43 mods:
+[20:26:59] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.19.2 with Fabric Loader 0.14.8
+[20:26:59] [main/INFO] (FabricLoader) Loading 43 mods:
 	- advancedblocks 0.0.1-1.19
 	- fabric 0.58.6+1.19.2
 	- fabric-api-base 0.4.9+e62f51a390
@@ -43,15 +43,15 @@
 	- fabricloader 0.14.8
 	- java 17
 	- minecraft 1.19.2
-[23:52:04] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/farrucho/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.11.4+mixin.0.8.5/c1dc27696aa4006e492c2485c9ccbcb26045a971/sponge-mixin-0.11.4+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
-[23:52:04] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[23:52:04] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
-[23:52:04] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[23:52:05] [main/WARN] (FileUtil) Configuration conflict: there is more than one oshi.properties file on the classpath
-[23:52:05] [main/WARN] (FileUtil) Configuration conflict: there is more than one oshi.architecture.properties file on the classpath
-[23:52:08] [main/INFO] (Minecraft) Building optimized datafixer
-[23:52:13] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[23:52:15] [Render thread/ERROR] (fabric-screen-api-v1) Failed to verify authentication
+[20:26:59] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/farrucho/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.11.4+mixin.0.8.5/c1dc27696aa4006e492c2485c9ccbcb26045a971/sponge-mixin-0.11.4+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
+[20:27:00] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[20:27:00] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
+[20:27:00] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[20:27:01] [main/WARN] (FileUtil) Configuration conflict: there is more than one oshi.properties file on the classpath
+[20:27:01] [main/WARN] (FileUtil) Configuration conflict: there is more than one oshi.architecture.properties file on the classpath
+[20:27:03] [main/INFO] (Minecraft) Building optimized datafixer
+[20:27:09] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[20:27:10] [Render thread/ERROR] (fabric-screen-api-v1) Failed to verify authentication
 com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
 	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:56) ~[authlib-3.11.49.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:155) ~[authlib-3.11.49.jar:?]
@@ -70,10 +70,10 @@ Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 4
 	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:48) ~[authlib-3.11.49.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:129) ~[authlib-3.11.49.jar:?]
 	... 10 more
-[23:52:15] [Render thread/INFO] (fabric-screen-api-v1) Setting user: Player396
-[23:52:15] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
-[23:52:17] [Render thread/INFO] (fabric-screen-api-v1) Backend library: LWJGL version 3.3.1 SNAPSHOT
-[23:52:20] [Worker-Main-12/ERROR] (Minecraft) Failed to retrieve profile key pair
+[20:27:10] [Render thread/INFO] (fabric-screen-api-v1) Setting user: Player25
+[20:27:11] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[20:27:12] [Render thread/INFO] (fabric-screen-api-v1) Backend library: LWJGL version 3.3.1 SNAPSHOT
+[20:27:15] [Worker-Main-13/ERROR] (Minecraft) Failed to retrieve profile key pair
 java.io.IOException: Could not retrieve profile key pair
 	at net.minecraft.client.util.ProfileKeys.fetchKeyPair(ProfileKeys.java:179) ~[minecraft-project-@-merged-named.jar:?]
 	at net.minecraft.client.util.ProfileKeys.method_44291(ProfileKeys.java:79) ~[minecraft-project-@-merged-named.jar:?]
@@ -84,7 +84,7 @@ java.io.IOException: Could not retrieve profile key pair
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) [?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) [?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) [?:?]
-[23:52:20] [Render thread/WARN] (Minecraft) ERROR : Couldn't load Narrator library
+[20:27:15] [Render thread/WARN] (Minecraft) ERROR : Couldn't load Narrator library
 java.lang.UnsatisfiedLinkError: libflite.so.1: cannot open shared object file: No such file or directory
 	at com.sun.jna.Native.open(Native Method) ~[jna-5.10.0.jar:?]
 	at com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:277) ~[jna-5.10.0.jar:?]
@@ -100,30 +100,29 @@ java.lang.UnsatisfiedLinkError: libflite.so.1: cannot open shared object file: N
 	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) [fabric-loader-0.14.8.jar:?]
 	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.14.8.jar:?]
 	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
-[23:52:20] [Render thread/INFO] (Minecraft) Reloading ResourceManager: Default, Fabric Mods (Fabric BlockRenderLayer Registration (v1), Fabric Registry Sync (v0), Fabric Item API (v1), Fabric Command API (v2), Fabric Rendering (v1), Fabric API, Fabric Entity Events (v1), Fabric Loot API (v2), Fabric API Base, Fabric Events Interaction (v0), Fabric Rendering Fluids (v1), Fabric Resource Conditions API (v1), Fabric Game Test API (v1), Fabric Renderer - Indigo, Fabric Models (v0), Fabric Screen Handler API (v1), Fabric Loader, Fabric Convention Tags, Fabric Renderer API (v1), Fabric Dimensions API (v1), Fabric Mining Level API (v1), Fabric Content Registries (v0), Fabric Particles (v1), Fabric Biome API (v1), Fabric Item Groups (v0), Fabric Game Rule API (v1), Fabric API Lookup API (v1), Fabric Rendering Data Attachment (v1), Fabric Data Generation API (v1), Fabric Screen API (v1), Fabric Transitive Access Wideners (v1), Fabric Lifecycle Events (v1), Fabric Key Binding API (v1), Fabric Textures (v0), Fabric Transfer API (v1), Fabric Object Builder API (v1), Fabric Networking API (v1), Fabric Message API (v1), Fabric Resource Loader (v0), Fabric Crash Report Info (v1), Advanced Blocks Mod)
-[23:52:20] [Render thread/INFO] (advancedblocks) This line is printed by an example mod mixin!
-[23:52:21] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: Invalid session id
-[23:52:24] [Worker-Main-14/WARN] (Minecraft) Unable to resolve texture reference: #missing in advancedblocks:block/trash_can
-[23:52:24] [Worker-Main-14/WARN] (Minecraft) Unable to resolve texture reference: #missing in advancedblocks:item/trash_can
-[23:52:24] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
-[23:52:24] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[23:52:24] [Render thread/INFO] (Minecraft) OpenAL initialized on device JACK Default
-[23:52:24] [Render thread/INFO] (Minecraft) Sound engine started
-[23:52:25] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[23:52:25] [Render thread/INFO] (Minecraft) Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
-[23:52:25] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[23:52:25] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[23:52:25] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[23:52:25] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[23:52:25] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[23:52:27] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[23:52:28] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[23:52:28] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[23:52:28] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[23:52:28] [Render thread/INFO] (advancedblocks) This line is printed by an example mod mixin!
-[23:52:36] [Render thread/INFO] (Minecraft) Loaded 7 recipes
-[23:52:37] [Render thread/INFO] (Minecraft) Loaded 1179 advancements
-[23:52:39] [Worker-Main-22/ERROR] (Minecraft) Failed to retrieve profile key pair
+[20:27:15] [Render thread/INFO] (Minecraft) Reloading ResourceManager: Default, Fabric Mods (Fabric Item Groups (v0), Fabric Events Interaction (v0), Fabric Entity Events (v1), Fabric Models (v0), Fabric Textures (v0), Fabric Renderer API (v1), Fabric Particles (v1), Fabric Screen Handler API (v1), Fabric Crash Report Info (v1), Fabric Key Binding API (v1), Fabric Content Registries (v0), Fabric BlockRenderLayer Registration (v1), Fabric Message API (v1), Fabric Item API (v1), Fabric Data Generation API (v1), Fabric Rendering Data Attachment (v1), Fabric Rendering (v1), Fabric Dimensions API (v1), Fabric API, Fabric API Lookup API (v1), Fabric Biome API (v1), Fabric Registry Sync (v0), Fabric Game Test API (v1), Fabric Networking API (v1), Fabric Resource Loader (v0), Fabric Mining Level API (v1), Fabric Transfer API (v1), Fabric Loader, Fabric Object Builder API (v1), Fabric Renderer - Indigo, Fabric Rendering Fluids (v1), Fabric Loot API (v2), Fabric Command API (v2), Fabric Screen API (v1), Fabric Game Rule API (v1), Fabric Transitive Access Wideners (v1), Fabric Resource Conditions API (v1), Fabric API Base, Fabric Lifecycle Events (v1), Fabric Convention Tags, Advanced Blocks Mod)
+[20:27:15] [Render thread/INFO] (advancedblocks) This line is printed by an example mod mixin!
+[20:27:16] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: Invalid session id
+[20:27:20] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
+[20:27:20] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[20:27:20] [Render thread/INFO] (Minecraft) OpenAL initialized on device JACK Default
+[20:27:20] [Render thread/INFO] (Minecraft) Sound engine started
+[20:27:20] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[20:27:20] [Render thread/INFO] (Minecraft) Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[20:27:20] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[20:27:20] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[20:27:20] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[20:27:20] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[20:27:20] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[20:27:23] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[20:27:23] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[20:27:23] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[20:27:23] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[20:27:23] [Render thread/INFO] (advancedblocks) This line is printed by an example mod mixin!
+[20:27:37] [Worker-Bootstrap-11/INFO] (Minecraft) 4283 Datafixer optimizations took 33159 milliseconds
+[20:28:15] [Render thread/INFO] (Minecraft) Loaded 7 recipes
+[20:28:15] [Render thread/INFO] (Minecraft) Loaded 1179 advancements
+[20:28:16] [Worker-Main-21/ERROR] (Minecraft) Failed to retrieve profile key pair
 java.io.IOException: Could not retrieve profile key pair
 	at net.minecraft.client.util.ProfileKeys.fetchKeyPair(ProfileKeys.java:179) ~[minecraft-project-@-merged-named.jar:?]
 	at net.minecraft.client.util.ProfileKeys.method_44291(ProfileKeys.java:79) ~[minecraft-project-@-merged-named.jar:?]
@@ -134,67 +133,89 @@ java.io.IOException: Could not retrieve profile key pair
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) [?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) [?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) [?:?]
-[23:52:39] [Render thread/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 63 new biomes in 15.10 ms
-[23:52:39] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.19.2
-[23:52:39] [Server thread/INFO] (Minecraft) Generating keypair
-[23:52:40] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
-[23:52:41] [Worker-Bootstrap-9/INFO] (Minecraft) 4283 Datafixer optimizations took 33097 milliseconds
-[23:52:44] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[23:52:44] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[23:52:44] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[23:52:44] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[23:52:44] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[23:52:44] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[23:52:44] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[23:52:44] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[23:52:44] [Render thread/INFO] (Minecraft) Preparing spawn area: 6%
-[23:52:45] [Render thread/INFO] (Minecraft) Preparing spawn area: 71%
-[23:52:45] [Render thread/INFO] (Minecraft) Time elapsed: 4878 ms
-[23:52:45] [Server thread/INFO] (Minecraft) Changing view distance to 2, from 10
-[23:52:45] [Server thread/INFO] (Minecraft) Changing simulation distance to 5, from 0
-[23:52:46] [Server thread/INFO] (Minecraft) Player396[local:E:86c9f54d] logged in with entity id 172 at (164.34034865326646, 74.0, -53.30000001192093)
-[23:52:46] [Server thread/INFO] (Minecraft) Player396 joined the game
-[23:52:46] [Server thread/INFO] (Minecraft) Player396 has made the advancement [Getting an Upgrade]
-[23:52:46] [Server thread/INFO] (Minecraft) Player396 has made the advancement [Isn't It Iron Pick]
-[23:52:46] [Render thread/INFO] (Minecraft) [System] [CHAT] Player396 has made the advancement [Getting an Upgrade]
-[23:52:46] [Render thread/INFO] (Minecraft) [System] [CHAT] Player396 has made the advancement [Isn't It Iron Pick]
-[23:52:46] [Render thread/INFO] (Minecraft) Loaded 40 advancements
-[23:54:11] [Render thread/WARN] (FileUtil) Configuration conflict: there is more than one oshi.architecture.properties file on the classpath
-[23:54:11] [Server thread/INFO] (Minecraft) Stopping server
-[23:54:11] [Server thread/INFO] (Minecraft) Saving players
-[23:54:11] [Server thread/INFO] (Minecraft) Saving worlds
-[23:54:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[23:54:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[23:54:12] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[23:54:12] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (New World): All chunks are saved
-[23:54:12] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[23:54:12] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[23:54:12] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
-[23:54:12] [Render thread/ERROR] (fabric-screen-api-v1) Reported exception thrown!
-net.minecraft.util.crash.CrashException: Container click
-	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:505) ~[minecraft-project-@-merged-named.jar:?]
-	at net.minecraft.client.Mouse.onMouseButton(Mouse.java:89) ~[minecraft-project-@-merged-named.jar:?]
-	at net.minecraft.client.Mouse.method_22686(Mouse.java:167) ~[minecraft-project-@-merged-named.jar:?]
-	at net.minecraft.util.thread.ThreadExecutor.execute(ThreadExecutor.java:101) ~[minecraft-project-@-merged-named.jar:?]
-	at net.minecraft.client.Mouse.method_22684(Mouse.java:167) ~[minecraft-project-@-merged-named.jar:?]
-	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) ~[lwjgl-glfw-3.3.1.jar:?]
-	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.1.jar:?]
-	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3474) ~[lwjgl-glfw-3.3.1.jar:?]
-	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:176) ~[minecraft-project-@-merged-named.jar:?]
-	at net.minecraft.client.MinecraftClient.render(MinecraftClient.java:1129) ~[minecraft-project-@-merged-named.jar:?]
-	at net.minecraft.client.MinecraftClient.run(MinecraftClient.java:752) [minecraft-project-@-merged-named.jar:?]
-	at net.minecraft.client.main.Main.main(Main.java:220) [minecraft-project-@-merged-named.jar:?]
-	at net.minecraft.client.main.Main.main(Main.java:56) [minecraft-project-@-merged-named.jar:?]
-	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:461) [fabric-loader-0.14.8.jar:?]
-	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) [fabric-loader-0.14.8.jar:?]
-	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.14.8.jar:?]
-	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
-Caused by: java.lang.NullPointerException: Cannot invoke "net.minecraft.item.ItemStack.isEmpty()" because "itemStack" is null
-	at net.minecraft.screen.ScreenHandler.internalOnSlotClick(ScreenHandler.java:442) ~[minecraft-project-@-merged-named.jar:?]
-	at net.minecraft.screen.ScreenHandler.onSlotClick(ScreenHandler.java:316) ~[minecraft-project-@-merged-named.jar:?]
-	at net.minecraft.client.network.ClientPlayerInteractionManager.clickSlot(ClientPlayerInteractionManager.java:392) ~[minecraft-project-@-merged-named.jar:?]
-	at net.minecraft.client.gui.screen.ingame.HandledScreen.onMouseClick(HandledScreen.java:512) ~[minecraft-project-@-merged-named.jar:?]
-	at net.minecraft.client.gui.screen.ingame.HandledScreen.mouseClicked(HandledScreen.java:323) ~[minecraft-project-@-merged-named.jar:?]
-	at net.minecraft.client.Mouse.method_1611(Mouse.java:89) ~[minecraft-project-@-merged-named.jar:?]
-	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:494) ~[minecraft-project-@-merged-named.jar:?]
-	... 16 more
+[20:28:16] [Render thread/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 63 new biomes in 3.134 ms
+[20:28:16] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.19.2
+[20:28:16] [Server thread/INFO] (Minecraft) Generating keypair
+[20:28:16] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[20:28:19] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[20:28:19] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[20:28:19] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[20:28:19] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[20:28:19] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[20:28:19] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[20:28:19] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[20:28:20] [Render thread/INFO] (Minecraft) Preparing spawn area: 26%
+[20:28:20] [Render thread/INFO] (Minecraft) Time elapsed: 4225 ms
+[20:28:21] [Server thread/INFO] (Minecraft) Changing view distance to 2, from 10
+[20:28:21] [Server thread/INFO] (Minecraft) Changing simulation distance to 5, from 0
+[20:28:21] [Server thread/INFO] (Minecraft) Player25[local:E:332a9736] logged in with entity id 161 at (106.43912722293926, 63.0, -39.412058572383906)
+[20:28:21] [Server thread/INFO] (Minecraft) Player25 joined the game
+[20:28:22] [Render thread/INFO] (Minecraft) Loaded 0 advancements
+[20:28:25] [Worker-Main-16/WARN] (Minecraft) Couldn't look up profile properties for com.mojang.authlib.GameProfile@26889e0d[id=20e20b8f-a9c3-33a3-bcf3-eb6875f0683d,name=Player25,properties={},legacy=false]
+com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:134) ~[authlib-3.11.49.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:106) ~[authlib-3.11.49.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:197) ~[authlib-3.11.49.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:64) ~[authlib-3.11.49.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:61) ~[authlib-3.11.49.jar:?]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3533) ~[guava-31.0.1-jre.jar:?]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2282) ~[guava-31.0.1-jre.jar:?]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2159) ~[guava-31.0.1-jre.jar:?]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2049) ~[guava-31.0.1-jre.jar:?]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3966) ~[guava-31.0.1-jre.jar:?]
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3989) ~[guava-31.0.1-jre.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4950) ~[guava-31.0.1-jre.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4956) ~[guava-31.0.1-jre.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:172) ~[authlib-3.11.49.jar:?]
+	at net.minecraft.client.MinecraftClient.getSessionProperties(MinecraftClient.java:2201) ~[minecraft-project-@-merged-named.jar:?]
+	at net.minecraft.client.texture.PlayerSkinProvider.method_4653(PlayerSkinProvider.java:115) ~[minecraft-project-@-merged-named.jar:?]
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1395) [?:?]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) [?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) [?:?]
+Caused by: java.net.UnknownHostException: sessionserver.mojang.com
+	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[?:?]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.net.Socket.connect(Socket.java:633) ~[?:?]
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304) ~[?:?]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:178) ~[?:?]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[?:?]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[?:?]
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:266) ~[?:?]
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:380) ~[?:?]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:193) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1287) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128) ~[?:?]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:179) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665) ~[?:?]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589) ~[?:?]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224) ~[?:?]
+	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:140) ~[authlib-3.11.49.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:111) ~[authlib-3.11.49.jar:?]
+	... 21 more
+[20:28:58] [Render thread/WARN] (Minecraft) Unable to play empty soundEvent: minecraft:entity.salmon.ambient
+[20:28:58] [Render thread/INFO] (Minecraft) Loaded 8 advancements
+[20:29:13] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[20:29:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20:29:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20:29:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20:30:06] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[20:30:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20:30:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20:30:06] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20:30:08] [Render thread/INFO] (fabric-screen-api-v1) Stopping!
+[20:30:08] [Server thread/INFO] (Minecraft) Player25 lost connection: Disconnected
+[20:30:08] [Server thread/INFO] (Minecraft) Player25 left the game
+[20:30:08] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[20:30:08] [Server thread/INFO] (Minecraft) Stopping server
+[20:30:08] [Server thread/INFO] (Minecraft) Saving players
+[20:30:08] [Server thread/INFO] (Minecraft) Saving worlds
+[20:30:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20:30:10] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20:30:10] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20:30:10] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (New World): All chunks are saved
+[20:30:10] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[20:30:10] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[20:30:10] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved

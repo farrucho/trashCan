@@ -1,6 +1,7 @@
 package net.farrucho.advancedblocks.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import net.farrucho.advancedblocks.AdvancedBlocks;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
@@ -10,7 +11,7 @@ import net.minecraft.util.Identifier;
 
 public class TrashCanScreen extends HandledScreen<TrashCanScreenHandler> {
     //A path to the gui texture. In this example we use the texture from the dispenser
-    private static final Identifier TEXTURE = new Identifier("minecraft", "textures/gui/container/dispenser.png");
+    private static final Identifier TEXTURE = new Identifier(AdvancedBlocks.MOD_ID, "textures/gui/trashcanscreen.png");
 
     public TrashCanScreen(TrashCanScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);

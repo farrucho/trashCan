@@ -13,9 +13,10 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 public class TrashCanBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory  {
-    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(9, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(1, ItemStack.EMPTY);
 
     public TrashCanBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.TRASH_CAN, pos, state);
@@ -56,5 +57,13 @@ public class TrashCanBlockEntity extends BlockEntity implements NamedScreenHandl
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt, this.inventory);
     }
+
+    public static void tick(World world, BlockPos pos, BlockState state, TrashCanBlockEntity be) {
+        if(!be.isEmpty()){
+            be.inventory.clear();
+        }
+    }
+
+
 
 }
