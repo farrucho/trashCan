@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "CYC",
+    "CMC"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stone"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    },
+    "Y": {
+      "item": "minecraft:chest"
+    },
+    "M": {
+      "item": "minecraft:magma_block"
+    }
+  },
+  "result": {
+    "item": "trashcans:trash_can",
+    "count": 1
+  }
+}

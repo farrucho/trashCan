@@ -54,7 +54,7 @@ Stacktrace:
 -- Click info --
 Details:
 	Menu Type: advancedblocks:trash_can
-	Menu Class: net.farrucho.advancedblocks.screen.TrashCanScreenHandler
+	Menu Class: net.farrucho.trashcans.screen.TrashCanScreenHandler
 	Slot Count: 45
 	Slot: 7
 	Button: 0
@@ -85,7 +85,7 @@ Stacktrace:
 
 -- Affected screen --
 Details:
-	Screen name: net.farrucho.advancedblocks.screen.TrashCanScreen
+	Screen name: net.farrucho.trashcans.screen.TrashCanScreen
 Stacktrace:
 	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:494)
 	at net.minecraft.client.Mouse.onMouseButton(Mouse.java:89)

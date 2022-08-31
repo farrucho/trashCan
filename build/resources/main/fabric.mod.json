@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "advancedblocks",
-  "version": "0.0.1-1.19",
+  "id": "trashcans",
+  "version": "0.0.1-1.19.X",
 
-  "name": "Advanced Blocks Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Trash Cans Mod",
+  "description": "Tired of burning your items in lava? This mod adds a craftable Trash Can.",
   "authors": [
     "farrucho"
   ],
@@ -19,14 +19,14 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.farrucho.advancedblocks.AdvancedBlocks"
+      "net.farrucho.trashcans.TrashCans"
     ],
     "client": [
-      "net.farrucho.advancedblocks.AdvancedBlocksClient"
+      "net.farrucho.trashcans.TrashCansClient"
     ]
   },
   "mixins": [
-    "advancedblocks.mixins.json"
+    "trashcans.mixins.json"
   ],
 
   "depends": {

@@ -1,4 +1,4 @@
-version:3120
+version:2975
 autoJump:true
 autoSuggestions:true
 chatColors:true
@@ -12,7 +12,6 @@ invertYMouse:false
 realmsNotifications:true
 reducedDebugInfo:false
 showSubtitles:false
-directionalAudio:false
 touchscreen:false
 fullscreen:false
 bobView:true
@@ -21,27 +20,27 @@ toggleSprint:false
 darkMojangStudiosBackground:false
 hideLightningFlashes:false
 mouseSensitivity:0.3028169014084507
-fov:0.75
+fov:0.5
 screenEffectScale:1.0
 fovEffectScale:1.0
-darknessEffectScale:1.0
 gamma:1.0
 renderDistance:2
 simulationDistance:5
 entityDistanceScaling:0.5
 guiScale:3
 particles:1
-maxFps:30
+maxFps:40
+difficulty:2
 graphicsMode:0
 ao:0
 prioritizeChunkUpdates:0
 biomeBlendRadius:0
-renderClouds:"false"
+renderClouds:false
 resourcePacks:["Fabric Mods"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us
-soundDevice:""
+soundDevice:
 chatVisibility:0
 chatOpacity:1.0
 chatLineSpacing:0.0
@@ -60,7 +59,7 @@ chatScale:1.0
 chatWidth:1.0
 mipmapLevels:4
 useNativeTransport:true
-mainHand:"right"
+mainHand:right
 attackIndicator:1
 narrator:0
 tutorialStep:none
@@ -75,8 +74,6 @@ hideBundleTutorial:false
 syncChunkWrites:false
 showAutosaveIndicator:true
 allowServerListing:true
-chatPreview:1
-onlyShowSecureChat:false
 key_key.attack:key.mouse.left
 key_key.use:key.mouse.right
 key_key.forward:key.keyboard.w
@@ -115,7 +112,7 @@ soundCategory_master:0.12417219
 soundCategory_music:0.31690142
 soundCategory_record:0.1971831
 soundCategory_weather:0.31338027
-soundCategory_block:0.20774648
+soundCategory_block:0.9753521
 soundCategory_hostile:0.30633804
 soundCategory_neutral:0.20070423
 soundCategory_player:0.23943663

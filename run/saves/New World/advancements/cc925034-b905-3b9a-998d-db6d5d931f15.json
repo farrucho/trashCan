@@ -1,7 +1,27 @@
 {
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_by_something": "2022-08-30 22:44:11 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_nugget_from_smelting": {
+    "criteria": {
+      "has_golden_pickaxe": "2022-08-30 22:43:55 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_nugget_from_blasting": {
+    "criteria": {
+      "has_golden_pickaxe": "2022-08-30 22:43:55 +0100"
+    },
+    "done": true
+  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:forest": "2022-08-30 19:45:51 +0100"
+      "minecraft:beach": "2022-08-30 22:44:13 +0100",
+      "minecraft:forest": "2022-08-30 19:45:51 +0100",
+      "minecraft:plains": "2022-08-30 22:43:57 +0100"
     },
     "done": false
   },
