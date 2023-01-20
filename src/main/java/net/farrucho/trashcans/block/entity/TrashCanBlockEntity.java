@@ -11,6 +11,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -43,8 +44,8 @@ public class TrashCanBlockEntity extends BlockEntity implements NamedScreenHandl
 
     @Override
     public Text getDisplayName() {
-        return Text.translatable(getCachedState().getBlock().getTranslationKey());
-        //return new TranslatableText(getCachedState().getBlock().getTranslationKey());
+        //return Text.translatable(getCachedState().getBlock().getTranslationKey());
+        return new TranslatableText(getCachedState().getBlock().getTranslationKey());
     }
 
     @Override
@@ -54,9 +55,9 @@ public class TrashCanBlockEntity extends BlockEntity implements NamedScreenHandl
     }
 
     @Override
-    public void writeNbt(NbtCompound nbt) {
-        super.writeNbt(nbt);
+    public NbtCompound writeNbt(NbtCompound nbt) {
         Inventories.writeNbt(nbt, this.inventory);
+        return super.writeNbt(nbt);
     }
 
     public static void tick(World world, BlockPos pos, BlockState state, TrashCanBlockEntity be) {

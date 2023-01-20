@@ -48,7 +48,7 @@ public class TrashCanScreenHandler extends ScreenHandler {
     }
 
     @Override
-    public ItemStack transferSlot(PlayerEntity player, int index) {
+    public ItemStack transferSlot(PlayerEntity player, int index) { //charm de quickmove 1.19.3
         ItemStack newStack = ItemStack.EMPTY;
         Slot slot = this.slots.get(index);
         if (slot != null && slot.hasStack()) {
@@ -71,6 +71,7 @@ public class TrashCanScreenHandler extends ScreenHandler {
 
         return newStack;
     }
+
 
     @Override
     public boolean canUse(PlayerEntity player) {
